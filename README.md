@@ -2,7 +2,7 @@
 
 ***
 
-*printDiamond()*
+_printDiamond()_
 ```
   *
  ***
