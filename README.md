@@ -11,7 +11,7 @@
 
 ***
 
-###printEmptySquare()
+### printEmptySquare()
 ```
 *****
 *   *
@@ -19,3 +19,81 @@
 *   *
 *****
 ```
+
+***
+
+### printInvertedPyramid()
+```
+*********
+ *******
+  *****
+   ***
+    *
+```
+
+***
+
+### printInvertedRightHalfTriangle()
+```
+*****
+****
+***
+**
+*
+```
+
+***
+
+### printLeftHalfTriangle()
+```
+    *
+   **
+  ***
+ ****
+*****
+```
+
+***
+
+### printPyramid()
+```
+    *
+   ***
+  *****
+ *******
+*********
+```
+
+***
+
+### printRightHalfTriangle()
+```
+
+*
+**
+***
+****
+*****
+```
+
+***
+
+### printSolidRectangle()
+```
+***
+***
+***
+***
+```
+
+***
+
+### printSolidSquare()
+```
+*****
+*****
+*****
+*****
+*****
+```
+     
