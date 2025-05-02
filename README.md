@@ -1,5 +1,4 @@
 # Pattern-printing
-***
 
 ### printDiamond()
 ```
@@ -8,4 +7,15 @@
 *****
  ***
   *
+```
+
+***
+
+###printEmptySquare()
+```
+*****
+*   *
+*   *
+*   *
+*****
 ```
