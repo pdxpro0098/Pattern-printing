@@ -184,6 +184,51 @@ void printEmptySquare(int lines)
     }
 }
 
+void printEmptyDiamond(int lines)
+{
+    for (int i = 0; i < lines; i++)
+    {
+        for (int j = lines; j > i; j--)
+        {
+            printf("*");
+        }
+        for (int k = -1; k < i; k++)
+        {
+            printf(" ");
+        }
+        for (int k = 0; k < i; k++)
+        {
+            printf(" ");
+        }
+        for (int j = lines; j > i; j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    for (int i = 1; i < lines; i++)
+    {
+        for (int k = 0; k <= i; k++)
+        {
+            printf("*");
+        }
+        for (int j = lines-1; j > i; j--)
+        {
+            printf(" ");
+        }
+        for (int j = lines; j > i; j--)
+        {
+            printf(" ");
+        }
+        for (int k = 0; k <= i; k++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
 

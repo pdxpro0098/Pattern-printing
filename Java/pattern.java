@@ -1,9 +1,5 @@
 public class pattern {
 
-    public static void main(String[] args) {
-        printSolidSquare(5);
-    }
-
     static void printSolidSquare(int lines) {
         for (int i = 0; i < lines; i++) {
             for (int j = 0; j < lines; j++) {
@@ -142,4 +138,41 @@ public class pattern {
         }
     }
 
+    static void printEmptyDiamond(int lines) {
+        for (int i = 0; i < lines; i++) {
+            for (int j = lines; j > i; j--) {
+                System.out.print("*");
+            }
+            for (int k = -1; k < i; k++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < i; k++) {
+                System.out.print(" ");
+            }
+            for (int j = lines; j > i; j--) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+
+        for (int i = 1; i < lines; i++) {
+            for (int k = 0; k <= i; k++) {
+                System.out.print("*");
+            }
+            for (int j = lines - 1; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = lines; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k <= i; k++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+    }
+
+    public static void main(String[] args) {
+        printEmptyDiamond(7);
+    }
 }
