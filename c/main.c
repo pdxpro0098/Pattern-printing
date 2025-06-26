@@ -24,6 +24,20 @@ void printSolidRectangle(int rows, int columns)
     }
 }
 
+void floydTriangle(int lines)
+{
+    int num = 1;
+    for (int i = 0; i < lines; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            printf("%d ", num);
+            num++;
+        }
+        printf("\n");
+    }
+}
+
 void rightHalfTriangle(int lines)
 {
     for (int i = 0; i <= lines; i++)
@@ -213,7 +227,7 @@ void printEmptyDiamond(int lines)
         {
             printf("*");
         }
-        for (int j = lines-1; j > i; j--)
+        for (int j = lines - 1; j > i; j--)
         {
             printf(" ");
         }
@@ -231,6 +245,6 @@ void printEmptyDiamond(int lines)
 
 int main()
 {
-
+    floydTriangle(6);
     return 0;
 }
