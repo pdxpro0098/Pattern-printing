@@ -1,4 +1,6 @@
-#include <stdio.h>
+#include <iostream>
+
+using namespace std;
 
 void solidSquare(int line)
 {
@@ -6,9 +8,9 @@ void solidSquare(int line)
     {
         for (int j = 0; j < line; j++)
         {
-            printf("*");
+            cout << "*";
         }
-        printf("\n");
+        cout << "\n";
     }
 }
 
