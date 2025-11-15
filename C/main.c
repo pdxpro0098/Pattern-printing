@@ -21,7 +21,8 @@ void hollowSquare(int line)
             if ((i == 0 || i == line - 1) || (j == 0 || j == line - 1))
             {
                 printf("*");
-            }else
+            }
+            else
             {
                 printf(" ");
             }
