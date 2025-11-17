@@ -7,7 +7,6 @@ public class Main {
             }
             System.out.println();
         }
-
     }
 
     static void hollowSquare(int line) {
@@ -23,7 +22,16 @@ public class Main {
         }
     }
 
+    static void numberSquare(int line) {
+        for (int i = 1; i <= line; i++) {
+            for (int j = 1; j <= line; j++) {
+                System.out.print(i + " ");
+            }
+            System.out.println(); 
+        }
+    }
+
     public static void main(String[] args) {
-        hollowSquare(5);
+        numberSquare(5);
     }
 }

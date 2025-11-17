@@ -30,8 +30,20 @@ void hollowSquare(int line)
         printf("\n");
     }
 }
+void numberSquare(int line)
+{
+    for (int i = 1; i <= line; i++)
+    {
+        for (int j = 1; j <= line; j++)
+        {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+}
 
 int main()
 {
+    numberSquare(5);
     return 0;
 }
