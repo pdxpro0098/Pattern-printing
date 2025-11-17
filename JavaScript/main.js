@@ -24,4 +24,15 @@ function hollowSquare(line) {
     console.log(pattern);
 }
 
-hollowSquare(5);
+function numberSquare(line) {
+    let pattern = "";
+    for (let i = 1; i <= line; i++) {
+        for (let j = 1; j <= line; j++) {
+            pattern += i + "";
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+
+numberSquare(5);
