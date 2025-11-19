@@ -18,5 +18,10 @@ def numberSquare(line):
         print(str(i) * line)
 
 
+def solidRectangle(row, column):
+    for _ in range(row):
+        print("*" * column)
+
+
 if __name__ == "__main__":
-    numberSquare(5)
+    solidRectangle(5, 2)

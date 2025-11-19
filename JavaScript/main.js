@@ -35,4 +35,15 @@ function numberSquare(line) {
     console.log(pattern);
 }
 
-numberSquare(5);
+function solidRectangle(row, column) {
+    let pattern = "";
+    for (let i = 1; i <= row; i++) {
+        for (let j = 1; j <= column; j++) {
+            pattern += "*";
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+
+solidRectangle(3, 5);
