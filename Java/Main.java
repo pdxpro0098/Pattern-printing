@@ -27,11 +27,20 @@ public class Main {
             for (int j = 1; j <= line; j++) {
                 System.out.print(i + " ");
             }
-            System.out.println(); 
+            System.out.println();
+        }
+    }
+
+    static void solidRectangle(int row, int column) {
+        for (int i = 1; i <= row; i++) {
+            for (int j = 1; j <= column; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 
     public static void main(String[] args) {
-        numberSquare(5);
+        solidRectangle(5,3);
     }
 }

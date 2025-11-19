@@ -42,8 +42,20 @@ void numberSquare(int line)
     }
 }
 
+void solidRectangle(int row, int column)
+{
+    for (int i = 1; i <= row; i++)
+    {
+        for (int j = 1; j <= column; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    numberSquare(5);
+    solidRectangle(5, 3);
     return 0;
 }
