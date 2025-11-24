@@ -74,8 +74,20 @@ void hollowRectangle(int row, int column)
     }
 }
 
+void rightHalfTriangle(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    hollowRectangle(5, 7);
+    rightHalfTriangle(7);
     return 0;
 }

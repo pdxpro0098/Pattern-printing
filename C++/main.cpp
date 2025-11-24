@@ -76,9 +76,21 @@ void hollowRectangle(int row, int column)
     }
 }
 
+void rightHalfTriangle(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
 
-    hollowRectangle(5, 3);
+    rightHalfTriangle(5);
     return 0;
 }
