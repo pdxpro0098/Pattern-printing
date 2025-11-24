@@ -46,4 +46,20 @@ function solidRectangle(row, column) {
     console.log(pattern);
 }
 
-solidRectangle(3, 5);
+function hollowRectangle(row, column) {
+    let pattern = "";
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < column; j++) {
+            if ((i === 0 || i === row - 1) || (j === 0 || j === column - 1)) {
+                pattern += "*";
+            }
+            else {
+                pattern += " ";
+            }
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+
+hollowRectangle(3, 5);

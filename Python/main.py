@@ -23,5 +23,15 @@ def solidRectangle(row, column):
         print("*" * column)
 
 
+def hollowRectangle(row, column):
+    for i in range(row):
+        for j in range(column):
+            if i in (0, row - 1) or j in (0, column - 1):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+
 if __name__ == "__main__":
-    solidRectangle(5, 2)
+    hollowRectangle(5, 8)
