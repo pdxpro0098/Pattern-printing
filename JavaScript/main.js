@@ -62,4 +62,15 @@ function hollowRectangle(row, column) {
     console.log(pattern);
 }
 
-hollowRectangle(3, 5);
+function rightHalfTriangle(line) {
+    let pattern = "";
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i + 1; j++) {
+            pattern += "*";
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+
+rightHalfTriangle(5);

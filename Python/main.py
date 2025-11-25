@@ -33,5 +33,12 @@ def hollowRectangle(row, column):
         print()
 
 
+def rightHalfTriangle(line):
+    for i in range(line):
+        for j in range(i+1):
+            print("*", end="")
+        print()
+
+
 if __name__ == "__main__":
-    hollowRectangle(5, 8)
+    rightHalfTriangle(8) 
