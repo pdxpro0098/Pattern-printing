@@ -88,9 +88,26 @@ void rightHalfTriangle(int line)
     }
 }
 
+void leftHalfTriangle(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < i + 1; j++)
+        {
+            cout << "*";
+        }
+
+        cout << endl;
+    }
+}
+
 int main()
 {
 
-    rightHalfTriangle(5);
+    leftHalfTriangle(5);
     return 0;
 }

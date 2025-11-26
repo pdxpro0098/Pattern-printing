@@ -86,8 +86,24 @@ void rightHalfTriangle(int line)
     }
 }
 
+void leftHalfTriangle(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < i + 1; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    rightHalfTriangle(7);
+    leftHalfTriangle(7);
     return 0;
 }

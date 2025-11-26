@@ -62,7 +62,19 @@ public class Main {
         }
     }
 
+    static void leftHalfTriangle(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = line; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        rightHalfTriangle(8);
+        leftHalfTriangle(8);
     }
 }
