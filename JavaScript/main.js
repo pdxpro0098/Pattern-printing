@@ -73,4 +73,18 @@ function rightHalfTriangle(line) {
     console.log(pattern);
 }
 
-rightHalfTriangle(5);
+function leftHalfTriangle(line) {
+    let pattern = "";
+    for (let i = 0; i < line; i++) {
+        for (let j = line; j > i; j--) {
+            pattern += " ";
+        }
+        for (let j = 0; j < i + 1; j++) {
+            pattern += "*";
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+
+leftHalfTriangle(5);
