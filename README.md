@@ -76,7 +76,12 @@
 
 ## inverted Right Half Triangle
 ```
-
+******
+***** 
+****  
+***   
+**    
+* 
 ```
 ---
 

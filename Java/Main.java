@@ -74,7 +74,16 @@ public class Main {
         }
     }
 
+    static void invertedRightHalfTriangle(int line) {
+        for (int i = line; i > 0; i--) {
+            for (int j = i - 1; j > 0; j--) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        leftHalfTriangle(8);
+        invertedRightHalfTriangle(8);
     }
 }
