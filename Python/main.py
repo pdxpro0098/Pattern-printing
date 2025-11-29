@@ -49,5 +49,11 @@ def leftHalfTriangle(line):
         print()
 
 
+def invertedRightHalfTriangle(line):
+    for i in reversed(range(line)):
+        for _ in reversed(range(i+1)):
+            print("*", end="")
+        print()
+
 if __name__ == "__main__":
-    leftHalfTriangle(5)
+    invertedRightHalfTriangle(5)
