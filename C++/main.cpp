@@ -117,9 +117,25 @@ void invertedRightHalfTriangle(int line)
     }
 }
 
+void invertedLeftHalfTriangle(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            cout << " ";
+        }
+        for (int j = line; j > i; j--)
+        {
+            cout << "*";
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
 
-    invertedRightHalfTriangle(5);
+    invertedLeftHalfTriangle(7);
     return 0;
 }

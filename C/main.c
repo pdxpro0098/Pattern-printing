@@ -114,8 +114,24 @@ void invertedRightHalfTriangle(int line)
     }
 }
 
+void invertedLeftHalfTriangle(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            printf(" ");
+        }
+        for (int j = line; j > i; j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    invertedRightHalfTriangle(7);
+    invertedLeftHalfTriangle(7);
     return 0;
 }
