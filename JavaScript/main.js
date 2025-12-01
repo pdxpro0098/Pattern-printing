@@ -96,7 +96,20 @@ function invertedRightHalfTriangle(line) {
         pattern += "\n";
     }
     console.log(pattern);
-
 }
 
-invertedRightHalfTriangle(5);
+function invertedLeftHalfTriangle(line) {
+   let pattern = "";
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i + 1; j++) {
+            pattern += " ";
+        }
+        for (let j = line; j > i; j--) {
+            pattern += "*";
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+
+invertedLeftHalfTriangle(5);
