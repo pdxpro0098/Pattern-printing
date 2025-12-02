@@ -95,7 +95,17 @@ public class Main {
         }
     }
 
+    static void floydTriangle(int line) {
+        int n = 1;
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print(n++ + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        invertedLeftHalfTriangle(8);
+        floydTriangle(8);
     }
 }

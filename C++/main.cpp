@@ -133,9 +133,22 @@ void invertedLeftHalfTriangle(int line)
     }
 }
 
+void floydTriangle(int line)
+{
+    int n = 1;
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            cout << n++ << " ";
+        }
+        cout << "\n";
+    }
+}
+
 int main()
 {
 
-    invertedLeftHalfTriangle(7);
+    floydTriangle(7);
     return 0;
 }
