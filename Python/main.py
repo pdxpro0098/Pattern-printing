@@ -65,5 +65,14 @@ def invertedLeftHalfTriangle(line):
         print()
 
 
+def floydTriangle(line):
+    i = 1
+    for j in range(line):
+        for _ in range(j+1):
+            print(i, end=" ")
+            i += 1
+        print()
+
+
 if __name__ == "__main__":
-    invertedLeftHalfTriangle(5)
+    floydTriangle(5)

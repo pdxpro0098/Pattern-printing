@@ -99,7 +99,7 @@ function invertedRightHalfTriangle(line) {
 }
 
 function invertedLeftHalfTriangle(line) {
-   let pattern = "";
+    let pattern = "";
     for (let i = 0; i < line; i++) {
         for (let j = 0; j < i + 1; j++) {
             pattern += " ";
@@ -112,4 +112,18 @@ function invertedLeftHalfTriangle(line) {
     console.log(pattern);
 }
 
-invertedLeftHalfTriangle(5);
+function floydTriangle(line) {
+    let pattern = "";
+    let num = 1;
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i + 1; j++) {
+            pattern += num + " ";
+            num++;
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+
+}
+
+floydTriangle(5);
