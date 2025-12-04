@@ -223,4 +223,22 @@ function hollowPyramid(line) {
     console.log(pattern);
 }
 
-holloWPyramid(5);
+function invertedHollowPyramid(line) {
+    pattern = "";
+
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < 2 * i + 1; j++) {
+            pattern += " ";
+        }
+        for (let k = 0; k < 2 * (line - i) - 1; k++) {
+            if (k == 0 || k == 2 * (line - i) - 2 || i == 0)
+                pattern += "* ";
+            else
+                pattern += "  ";
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+
+invertedHollowPyramid(5);
