@@ -105,7 +105,31 @@ public class Main {
         }
     }
 
+    static int factorial(int num) {
+        int n = 1;
+        for (int i = 1; i <= num; i++) {
+            n *= i;
+        }
+        return n;
+    }
+
+    static int nCr(int n, int r) {
+        return factorial(n) / (factorial(r) * factorial(n - r));
+    }
+
+    static void pascalTriangle(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = line; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print(nCr(i, j) + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        floydTriangle(8);
+        pascalTriangle(5);
     }
 }

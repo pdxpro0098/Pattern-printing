@@ -146,9 +146,40 @@ void floydTriangle(int line)
     }
 }
 
+void pascalTriangle(int line)
+{
+    auto factorial = [](int num)
+    {
+        int n = 1;
+        for (int i = 1; i <= num; i++)
+        {
+            n *= i;
+        }
+        return n;
+    };
+
+    auto nCr = [factorial](int n, int r)
+    {
+        return factorial(n) / (factorial(r) * factorial(n - r));
+    };
+
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            printf(" ");
+        }
+        for (int k = 0; k <= i; k++)
+        {
+            printf("%d ", nCr(i, k));
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
+    pascalTriangle(6);
 
-    floydTriangle(7);
     return 0;
 }

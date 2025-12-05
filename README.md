@@ -87,31 +87,42 @@
 
 ## inverted Left Half Triangle
 ```
-
+   *****
+    ****
+     ***
+      **
+       *
 ```
 ---
 
 ## floyd Triangle
 ```
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
 
 ```
 ---
 
 ## Pascal Triangle
 ```
-
+      1    
+     1 1
+    1 2 1
+   1 3 3 1
+  1 4 6 4 1
 ```
 ---
 
 ## Binary Triangle
 ```
-
 ```
 ---
 
 ## Sierpinski_triangle
 ```
-
 ```
 ---
 
