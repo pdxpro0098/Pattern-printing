@@ -126,4 +126,30 @@ function floydTriangle(line) {
 
 }
 
-floydTriangle(5);
+function pascalTriangle(line) {
+    let pattern = "";
+    function factorial(num) {
+        let fact = 1
+        for (let i = 1; i < num; i++) {
+            fact = fact * i
+        }
+        return String(fact);
+    }
+
+    function nCr(n, r) {
+        return String(factorial(n) / (factorial(r) * factorial(n - r)));
+    }
+
+    for (let i = 0; i < line; i++) {
+        for (let j = line; j > i; j--) {
+            pattern += " ";
+        }
+        for (let k = 0; k <= i; k++) {
+            pattern += `${nCr(i, k)}` + " ";
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+
+pascalTriangle(5);

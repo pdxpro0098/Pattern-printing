@@ -74,5 +74,24 @@ def floydTriangle(line):
         print()
 
 
+def pascalTriangle(line):
+
+    def factorial(num):
+        fact = 1
+        for i in range(1, num+1):
+            fact = fact * i
+        return int(fact)
+
+    def nCr(n, r):
+        return int(factorial(n) / (factorial(r) * factorial(n - r)))
+
+    for i in range(line):
+        for _ in reversed(range(line-i)):
+            print("_", end="")
+        for j in range(i+1):
+            print(nCr(i, j), end=" ")
+        print()
+
+
 if __name__ == "__main__":
-    floydTriangle(5)
+    pascalTriangle(7)
