@@ -167,13 +167,32 @@ void pascalTriangle(int line)
     {
         for (int j = line; j > i; j--)
         {
-            printf(" ");
+            cout << " ";
         }
         for (int k = 0; k <= i; k++)
         {
-            printf("%d ", nCr(i, k));
+            cout << nCr(i, k);
         }
-        printf("\n");
+        cout << "\n";
+    }
+}
+
+void binaryTriangle(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            if ((i + j) % 2 == 0)
+            {
+                cout << "0";
+            }
+            else
+            {
+                cout << "1";
+            }
+        }
+       cout <<"\n";
     }
 }
 

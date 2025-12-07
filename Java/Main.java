@@ -129,7 +129,20 @@ public class Main {
         }
     }
 
+    static void binaryTriangle(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < i + 1; j++) {
+                if ((i + j) % 2 == 0) {
+                    System.out.print("0");
+                } else {
+                    System.out.print("1");
+                }
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        pascalTriangle(5);
+        binaryTriangle(5);
     }
 }

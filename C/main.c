@@ -173,8 +173,27 @@ void pascalTriangle(int line)
     }
 }
 
+void binaryTriangle(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            if ((i + j) % 2 == 0)
+            {
+                printf("0");
+            }
+            else
+            {
+                printf("1");
+            }
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    pascalTriangle(6);
+    binaryTriangle(6);
     return 0;
 }
