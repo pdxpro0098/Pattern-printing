@@ -152,4 +152,20 @@ function pascalTriangle(line) {
     console.log(pattern);
 }
 
-pascalTriangle(5);
+function binaryTriangle(line) {
+    let pattern = "";
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i + 1; j++) {
+            if ((i + j) % 2 == 0) {
+                pattern += "0";
+            }
+            else {
+                pattern += "1";
+            }
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+
+binaryTriangle(5);

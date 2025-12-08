@@ -93,5 +93,15 @@ def pascalTriangle(line):
         print()
 
 
+def binaryTriangle(line):
+    for i in range(line):
+        for j in range(i+1):
+            if (i + j) % 2 == 0:
+                print("0", end=" ")
+            else:
+                print("1", end=" ")
+        print("")
+
+
 if __name__ == "__main__":
-    pascalTriangle(7)
+    binaryTriangle(7)
