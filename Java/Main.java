@@ -191,7 +191,22 @@ public class Main {
         }
     }
 
+    static void invertedHollowPyramid(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < 2 * i + 1; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < 2 * (line - i) - 1; k++) {
+                if (k == 0 || k == 2 * (line - i) - 2 || i == 0)
+                    System.out.print("* ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        holloWPyramid(5);
+        invertedHollowPyramid(5);
     }
 }
