@@ -192,8 +192,28 @@ void binaryTriangle(int line)
     }
 }
 
+void pyramid(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < i + 1; j++)
+        {
+            printf("*");
+        }
+        for (int j = 1; j < i + 1; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    binaryTriangle(6);
+    pyramid(6);
     return 0;
 }

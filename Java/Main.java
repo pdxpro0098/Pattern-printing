@@ -142,7 +142,22 @@ public class Main {
         }
     }
 
+    static void pyramid(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = line; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print("*");
+            }
+            for (int j = 1; j < i + 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        binaryTriangle(5);
+        pyramid(5);
     }
 }

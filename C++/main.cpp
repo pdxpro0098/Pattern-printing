@@ -192,13 +192,33 @@ void binaryTriangle(int line)
                 cout << "1";
             }
         }
-       cout <<"\n";
+        cout << "\n";
+    }
+}
+
+void pyramid(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < i + 1; j++)
+        {
+            cout << "*";
+        }
+        for (int j = 1; j < i + 1; j++)
+        {
+            cout << "*";
+        }
+        printf("\n");
     }
 }
 
 int main()
 {
-    pascalTriangle(6);
+    pyramid(6);
 
     return 0;
 }
