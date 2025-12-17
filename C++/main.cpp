@@ -261,9 +261,28 @@ void hollowPyramid(int line)
     }
 }
 
+void invertedHollowPyramid(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < 2 * i + 1; j++)
+        {
+            cout << " ";
+        }
+        for (int k = 0; k < 2 * (line - i) - 1; k++)
+        {
+            if (k == 0 || k == 2 * (line - i) - 2 || i == 0)
+                cout << "* ";
+            else
+                cout << "  ";
+        }
+        cout << "\n";
+    }
+}
+
 int main()
 {
-    holloWPyramid(6);
+    invertedHollowPyramid(6);
 
     return 0;
 }
