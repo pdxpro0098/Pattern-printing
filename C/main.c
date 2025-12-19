@@ -212,8 +212,28 @@ void pyramid(int line)
     }
 }
 
+void invertedPyramid(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf(" ");
+        }
+        for (int j = line; j > i; j--)
+        {
+            printf("*");
+        }
+        for (int j = line - 1; j > i; j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    pyramid(6);
+    invertedPyramid(6);
     return 0;
 }

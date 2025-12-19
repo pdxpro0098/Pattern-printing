@@ -106,7 +106,7 @@ def binaryTriangle(line):
 def pyramid(line):
     for i in range(line):
         for _ in reversed(range(line-i)):
-            print("_", end="")
+            print(" ", end="")
         for _ in range(i):
             print("*", end="")
         for _ in range(i+1):
