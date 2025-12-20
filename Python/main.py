@@ -114,5 +114,16 @@ def pyramid(line):
         print("")
 
 
+def invertedPyramid(line):
+    for i in range(line):
+        for _ in range(i):
+            print(" ", end="")
+        for _ in reversed(range(line-i)):
+            print("*", end="")
+        for _ in reversed(range(line-i)):
+            print("*", end="")
+        print("")
+
+
 if __name__ == "__main__":
-    pyramid(7)
+    invertedPyramid(5)

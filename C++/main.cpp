@@ -202,17 +202,17 @@ void pyramid(int line)
     {
         for (int j = line; j > i; j--)
         {
-            std::cout << " ";
+            cout << " ";
         }
         for (int j = 0; j < i + 1; j++)
         {
-            std::cout << "*";
+            cout << "*";
         }
         for (int j = 1; j < i + 1; j++)
         {
-            std::cout << "*";
+            cout << "*";
         }
-        std::cout << "\n";
+        cout << "\n";
     }
 }
 
@@ -222,17 +222,17 @@ void invertedPyramid(int line)
     {
         for (int j = 0; j < i; j++)
         {
-            std::cout << " ";
+            cout << " ";
         }
         for (int j = line; j > i; j--)
         {
-            std::cout << "*";
+            cout << "*";
         }
         for (int j = line - 1; j > i; j--)
         {
-            std::cout << "*";
+            cout << "*";
         }
-        std::cout << "\n";
+        cout << "\n";
     }
 }
 
