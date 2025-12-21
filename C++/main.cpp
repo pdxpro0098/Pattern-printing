@@ -236,9 +236,34 @@ void invertedPyramid(int line)
     }
 }
 
+void holloWPyramid(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            cout << " ";
+        }
+        cout << "*";
+
+        for (int j = 1; j < i * 2 + 1; j++)
+        {
+            if (j == i * 2 || i == line - 1)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << "\n";
+    }
+}
+
 int main()
 {
-    pyramid(6);
+    holloWPyramid(6);
 
     return 0;
 }

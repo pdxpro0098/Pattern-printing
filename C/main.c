@@ -232,8 +232,33 @@ void invertedPyramid(int line)
     }
 }
 
+void holloWPyramid(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            printf(" ");
+        }
+        printf("*");
+
+        for (int j = 1; j < i * 2 + 1; j++)
+        {
+            if (j == i * 2 || i == line - 1)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    invertedPyramid(6);
+    holloWPyramid(5);
     return 0;
 }
