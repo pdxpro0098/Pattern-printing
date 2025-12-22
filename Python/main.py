@@ -129,7 +129,7 @@ def hollowPyramid(line):
             print(" ", end=" ")
         print("*", end=" ")
 
-        for j in range(i*2+1):
+        for j in range(1, i*2+1):
             if (j == i * 2 or i == line - 1):
                 print("*", end=" ")
             else:
