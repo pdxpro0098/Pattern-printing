@@ -202,5 +202,25 @@ function invertedPyramid(line) {
     console.log(pattern);
 }
 
+function hollowPyramid(line) {
+    pattern = "";
+    for (let i = 0; i < line; i++) {
+        for (let j = line; j > i; j--) {
+            pattern += " "
+        }
+        pattern += "*"
 
-invertedPyramid(5);
+        for (let j = 1; j < i * 2 + 1; j++) {
+            if (j == i * 2 || i == line - 1) {
+                pattern += "*"
+            }
+            else {
+                pattern += " "
+            }
+        }
+        pattern += "\n"
+    }
+    console.log(pattern);
+}
+
+holloWPyramid(5);

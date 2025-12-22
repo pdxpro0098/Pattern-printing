@@ -35,8 +35,7 @@ def hollowRectangle(row, column):
 
 def rightHalfTriangle(line):
     for i in range(line):
-        for _ in range(i+1):
-            print("*", end=" ")
+        print("*"*i, end=" ")
         print()
 
 
@@ -116,14 +115,27 @@ def pyramid(line):
 
 def invertedPyramid(line):
     for i in range(line):
-        for _ in range(i):
-            print(" ", end="")
+        print(" "*i, end="")
         for _ in reversed(range(line-i)):
             print("*", end="")
-        for _ in reversed(range(line-i)):
+        for _ in reversed(range(line-i-1)):
             print("*", end="")
         print("")
 
 
+def hollowPyramid(line):
+    for i in range(line):
+        for j in reversed(range(line-i)):
+            print(" ", end=" ")
+        print("*", end=" ")
+
+        for j in range(i*2+1):
+            if (j == i * 2 or i == line - 1):
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        print()
+
+
 if __name__ == "__main__":
-    invertedPyramid(5)
+    hollowPyramid(5)

@@ -236,7 +236,7 @@ void invertedPyramid(int line)
     }
 }
 
-void holloWPyramid(int line)
+void hollowPyramid(int line)
 {
     for (int i = 0; i < line; i++)
     {

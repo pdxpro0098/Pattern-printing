@@ -232,7 +232,7 @@ void invertedPyramid(int line)
     }
 }
 
-void holloWPyramid(int line)
+void hollowPyramid(int line)
 {
     for (int i = 0; i < line; i++)
     {
@@ -259,6 +259,6 @@ void holloWPyramid(int line)
 
 int main()
 {
-    holloWPyramid(5);
+    hollowPyramid(5);
     return 0;
 }
