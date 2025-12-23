@@ -280,9 +280,45 @@ void invertedHollowPyramid(int line)
     }
 }
 
+void diamond(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            cout << "  ";
+        }
+        for (int j = 0; j < i; j++)
+        {
+            cout << "*";
+        }
+        for (int j = 1; j < i; j++)
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = line; j > i; j--)
+        {
+            cout << "*";
+        }
+        for (int j = line - 1; j > i; j--)
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+}
+
 int main()
 {
-    invertedHollowPyramid(6);
+    diamond(6);
 
     return 0;
 }

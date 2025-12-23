@@ -206,7 +206,34 @@ public class Main {
         }
     }
 
+    static void diamond(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = line; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            for (int j = 1; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = line; j > i; j--) {
+                System.out.print("*");
+            }
+            for (int j = line - 1; j > i; j--) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        invertedHollowPyramid(5);
+        diamond(5);
     }
 }
