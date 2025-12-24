@@ -137,5 +137,17 @@ def hollowPyramid(line):
         print()
 
 
+def invertedHollowPyramid(line):
+    for i in range(line):
+        for j in range(2*i+1):
+            print(" ", end="")
+        for k in range(2*(line-i)-1):
+            if (k == 0 or k == 2 * (line - i) - 2 or i == 0):
+                print("* ", end="")
+            else:
+                print("  ", end="")
+        print()
+
+
 if __name__ == "__main__":
-    hollowPyramid(5)
+    invertedHollowPyramid(5)
