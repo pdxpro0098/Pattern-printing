@@ -139,7 +139,7 @@ def hollowPyramid(line):
 
 def invertedHollowPyramid(line):
     for i in range(line):
-        for j in range(2*i+1):
+        for _ in range(2*i+1):
             print(" ", end="")
         for k in range(2*(line-i)-1):
             if (k == 0 or k == 2 * (line - i) - 2 or i == 0):
@@ -149,5 +149,24 @@ def invertedHollowPyramid(line):
         print()
 
 
+def diamond(line):
+    for i in range(line):
+        for _ in reversed(range(line-i)):
+            print(" ", end="")
+        for _ in range(i):
+            print("*", end="")
+        for _ in range(i-1):
+            print("*", end="")
+        print("")
+
+    for i in range(line):
+        print(" "*i, end="")
+        for _ in reversed(range(line-i)):
+            print("*", end="")
+        for _ in reversed(range(line-i-1)):
+            print("*", end="")
+        print("")
+
+
 if __name__ == "__main__":
-    invertedHollowPyramid(5)
+    diamond(5)

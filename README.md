@@ -272,7 +272,7 @@
 ```
 ---
 
-## ## Checkerboard with Characters
+## Checkerboard with Characters
 ```
 
 ```
