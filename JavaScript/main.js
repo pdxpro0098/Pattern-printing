@@ -203,7 +203,7 @@ function invertedPyramid(line) {
 }
 
 function hollowPyramid(line) {
-    pattern = "";
+    let pattern = "";
     for (let i = 0; i < line; i++) {
         for (let j = line; j > i; j--) {
             pattern += " "
@@ -224,7 +224,7 @@ function hollowPyramid(line) {
 }
 
 function invertedHollowPyramid(line) {
-    pattern = "";
+    let pattern = "";
 
     for (let i = 0; i < line; i++) {
         for (let j = 0; j < 2 * i + 1; j++) {
@@ -241,4 +241,33 @@ function invertedHollowPyramid(line) {
     console.log(pattern);
 }
 
-invertedHollowPyramid(5);
+function diamond(line) {
+    let pattern = "";
+    for (let i = 0; i < line; i++) {
+        for (let j = line; j > i; j--) {
+            pattern+=" ";
+        }
+        for (let j = 0; j < i; j++) {
+            pattern+="*";
+        }
+        for (let j = 1; j < i; j++) {
+            pattern+="*";
+        }
+        pattern+=("\n");
+    }
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i; j++) {
+            pattern+=" ";
+        }
+        for (let j = line; j > i; j--) {
+            pattern+="*";
+        }
+        for (let j = line - 1; j > i; j--) {
+            pattern+="*";
+        }
+        pattern+="\n";
+    }
+    console.log(pattern);
+}
+
+diamond(5);
