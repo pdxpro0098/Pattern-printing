@@ -312,8 +312,72 @@ void diamond(int line)
     }
 }
 
+void hollowDiamond(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < i; j++)
+        {
+            if (j == 0)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        for (int j = 1; j < i; j++)
+        {
+            if ((j + 1) == i)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf(" ");
+        }
+        for (int j = line; j > i; j--)
+        {
+            if (j == 5)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        for (int j = line - 1; j > i; j--)
+        {
+            if (j == (i + 1))
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    diamond(5);
+    hollowDiamond(5);
     return 0;
 }
