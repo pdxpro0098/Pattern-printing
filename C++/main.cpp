@@ -316,9 +316,73 @@ void diamond(int line)
     }
 }
 
+void hollowDiamond(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < i; j++)
+        {
+            if (j == 0)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        for (int j = 1; j < i; j++)
+        {
+            if ((j + 1) == i)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << "\n";
+    }
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = line; j > i; j--)
+        {
+            if (j == 5)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        for (int j = line - 1; j > i; j--)
+        {
+            if (j == (i + 1))
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << "\n";
+    }
+}
+
 int main()
 {
-    diamond(6);
+    hollowDiamond(5);
 
     return 0;
 }
