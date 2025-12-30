@@ -168,5 +168,27 @@ def diamond(line):
         print("")
 
 
+def hollowDiamond(rows):
+    for i in range(rows):
+        for j in range(rows - i):
+            print(" ", end="")
+        for j in range(2 * i):
+            if j == 1 or j == 2 * i - 1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+    for i in reversed(range(rows - 1)):
+        for j in range(rows - i):
+            print(" ", end="")
+        for j in range(2 * i):
+            if j == 1 or j == 2 * i - 1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+
 if __name__ == "__main__":
-    diamond(5)
+    hollowDiamond(7)
