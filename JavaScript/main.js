@@ -245,29 +245,85 @@ function diamond(line) {
     let pattern = "";
     for (let i = 0; i < line; i++) {
         for (let j = line; j > i; j--) {
-            pattern+=" ";
+            pattern += " ";
         }
         for (let j = 0; j < i; j++) {
-            pattern+="*";
+            pattern += "*";
         }
         for (let j = 1; j < i; j++) {
-            pattern+="*";
+            pattern += "*";
         }
-        pattern+=("\n");
+        pattern += ("\n");
     }
     for (let i = 0; i < line; i++) {
         for (let j = 0; j < i; j++) {
-            pattern+=" ";
+            pattern += " ";
         }
         for (let j = line; j > i; j--) {
-            pattern+="*";
+            pattern += "*";
         }
         for (let j = line - 1; j > i; j--) {
-            pattern+="*";
+            pattern += "*";
         }
-        pattern+="\n";
+        pattern += "\n";
     }
     console.log(pattern);
 }
 
-diamond(5);
+
+function hollowDiamond(line) {
+    let pattern = "";
+    for (let i = 0; i < line; i++) {
+        for (let j = line; j > i; j--) {
+            pattern += " ";
+        }
+        for (let j = 0; j < i; j++) {
+            if (j == 0) {
+                pattern += "*";
+            }
+            else {
+                pattern += " ";
+            }
+        }
+        for (let j = 1; j < i; j++) {
+            if ((j + 1) == i) {
+                pattern += "*";
+            }
+            else {
+                pattern += " ";
+            }
+        }
+        pattern += "\n";
+
+    }
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i; j++) {
+            pattern += " ";
+
+        }
+        for (let j = line; j > i; j--) {
+            if (j == 5) {
+                pattern += "*";
+
+            }
+            else {
+                pattern += " ";
+
+            }
+        }
+        for (let j = line - 1; j > i; j--) {
+            if (j == (i + 1)) {
+                pattern += "*";
+
+            }
+            else {
+                pattern += " ";
+
+            }
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+
+hollowDiamond(5);
