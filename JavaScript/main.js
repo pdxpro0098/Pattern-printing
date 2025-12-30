@@ -302,23 +302,19 @@ function hollowDiamond(line) {
 
         }
         for (let j = line; j > i; j--) {
-            if (j == 5) {
+            if (j == line) {
                 pattern += "*";
-
             }
             else {
                 pattern += " ";
-
             }
         }
         for (let j = line - 1; j > i; j--) {
             if (j == (i + 1)) {
                 pattern += "*";
-
             }
             else {
                 pattern += " ";
-
             }
         }
         pattern += "\n";
@@ -326,4 +322,4 @@ function hollowDiamond(line) {
     console.log(pattern);
 }
 
-hollowDiamond(5);
+hollowDiamond(8);

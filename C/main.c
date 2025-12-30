@@ -352,7 +352,7 @@ void hollowDiamond(int line)
         }
         for (int j = line; j > i; j--)
         {
-            if (j == 5)
+            if (j == line)
             {
                 printf("*");
             }

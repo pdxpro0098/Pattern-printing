@@ -259,7 +259,7 @@ public class Main {
                 System.out.print(" ");
             }
             for (int j = line; j > i; j--) {
-                if (j == 5) {
+                if (j == line) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
