@@ -1,12 +1,20 @@
 using System;
 
-namespace HelloWorld
-{
-    class Program
+class Program{
+
+    public static void solidSquare(int line)
     {
-        static void Main(string[] args)
+        for (int i = 0; i < line; i++)
         {
-            Console.WriteLine("Hello World!");
+            for (int j = 0; j < line; j++)
+            {
+                Console.Write("*");
+            }
+        Console.WriteLine("");
         }
+    } 
+
+    static void Main(string[] args){
+        solidSquare(5);
     }
 }
