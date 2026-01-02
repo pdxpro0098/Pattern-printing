@@ -276,7 +276,7 @@ public class Main {
         }
     }
 
-    static void hourglassPattern(int line) {
+    static void hourglass(int line) {
         for (int i = 0; i < line; i++) {
             for (int j = 0; j < i; j++) {
                 System.out.print(" ");
@@ -310,6 +310,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        hourglassPattern(5);
+        hourglass(5);
     }
 }

@@ -321,7 +321,7 @@ function hollowDiamond(line) {
     console.log(pattern);
 }
 
-function hourglassPattern(line) {
+function hourglass(line) {
     let pattern = "";
     for (let i = 0; i < line; i++) {
         for (let j = 0; j < i; j++) {
@@ -351,4 +351,4 @@ function hourglassPattern(line) {
 
 }
 
-hourglassPattern(8);
+hourglass(8);

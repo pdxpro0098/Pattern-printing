@@ -380,7 +380,7 @@ void hollowDiamond(int line)
     }
 }
 
-void hourglassPattern(int line)
+void hourglass(int line)
 {
     for (int i = 0; i < line; i++)
     {
@@ -418,7 +418,7 @@ void hourglassPattern(int line)
 
 int main()
 {
-    hourglassPattern(5);
+    hourglass(5);
 
     return 0;
 }

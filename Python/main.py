@@ -190,7 +190,7 @@ def hollowDiamond(line):
         print()
 
 
-def hourglassPattern(line):
+def hourglass(line):
     for i in range(line):
         print(" "*i, end="")
         for _ in reversed(range(line-i)):
@@ -206,4 +206,4 @@ def hourglassPattern(line):
         print()
 
 if __name__ == "__main__":
-    hourglassPattern(7)
+    hourglass(7)
