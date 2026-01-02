@@ -168,9 +168,9 @@ def diamond(line):
         print("")
 
 
-def hollowDiamond(rows):
-    for i in range(rows):
-        for j in range(rows - i):
+def hollowDiamond(line):
+    for i in range(line):
+        for j in range(line - i):
             print(" ", end="")
         for j in range(2 * i):
             if j == 1 or j == 2 * i - 1:
@@ -179,8 +179,8 @@ def hollowDiamond(rows):
                 print(" ", end="")
         print()
 
-    for i in reversed(range(rows - 1)):
-        for j in range(rows - i):
+    for i in reversed(range(line - 1)):
+        for j in range(line - i):
             print(" ", end="")
         for j in range(2 * i):
             if j == 1 or j == 2 * i - 1:
@@ -189,6 +189,21 @@ def hollowDiamond(rows):
                 print(" ", end="")
         print()
 
+
+def hourglassPattern(line):
+    for i in range(line):
+        print(" "*i, end="")
+        for _ in reversed(range(line-i)):
+            print("*", end="")
+        for _ in reversed(range(line-i-1)):
+            print("*", end="")
+        print()
+    for i in range(1, line):
+        for _ in reversed(range(line-i-1)):
+            print(" ", end="")
+        print("*"*(i+1), end="")
+        print("*"*(i), end="")
+        print()
 
 if __name__ == "__main__":
-    hollowDiamond(7)
+    hourglassPattern(7)
