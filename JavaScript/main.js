@@ -299,7 +299,6 @@ function hollowDiamond(line) {
     for (let i = 0; i < line; i++) {
         for (let j = 0; j < i; j++) {
             pattern += " ";
-
         }
         for (let j = line; j > i; j--) {
             if (j == line) {
@@ -322,4 +321,34 @@ function hollowDiamond(line) {
     console.log(pattern);
 }
 
-hollowDiamond(8);
+function hourglassPattern(line) {
+    let pattern = "";
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i; j++) {
+            pattern += " ";
+        }
+        for (let j = line; j > i; j--) {
+            pattern += "*";
+        }
+        for (let j = line - 1; j > i; j--) {
+            pattern += "*";
+        }
+        pattern += "\n";
+    }
+    for (let i = 1; i < line; i++) {
+        for (let j = line; j > i + 1; j--) {
+            pattern += " ";
+        }
+        for (let j = 0; j < i + 1; j++) {
+            pattern += "*";
+        }
+        for (let j = 1; j < i + 1; j++) {
+            pattern += "*";
+        }
+        pattern += "\n";
+    }
+    console.log(pattern);
+
+}
+
+hourglassPattern(8);
