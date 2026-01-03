@@ -412,8 +412,74 @@ void hourglass(int line)
     }
 }
 
+void hollowHourglass(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf(" ");
+        }
+        for (int j = line; j > i; j--)
+        {
+            if (j == line || i == 0)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+
+        for (int j = line - 1; j > i; j--)
+        {
+            if (j == i + 1 || i == 0)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    for (int i = 1; i < line; i++)
+    {
+        for (int j = line; j > i + 1; j--)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < i + 1; j++)
+        {
+            if (j == 0 || i == line - 1)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        for (int j = 1; j < i + 1; j++)
+        {
+            if (j == i || i == line - 1)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    hourglass(5);
+    hollowHourglass(5);
     return 0;
 }
