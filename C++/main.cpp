@@ -129,7 +129,7 @@ void invertedLeftHalfTriangle(int line)
         {
             cout << "*";
         }
-        printf("\n");
+        cout << "\n";
     }
 }
 
@@ -386,39 +386,105 @@ void hourglass(int line)
     {
         for (int j = 0; j < i; j++)
         {
-            printf(" ");
+            cout << " ";
         }
         for (int j = line; j > i; j--)
         {
-            printf("*");
+            cout << "*";
         }
         for (int j = line - 1; j > i; j--)
         {
-            printf("*");
+            cout << "*";
         }
-        printf("\n");
+        cout << "\n";
     }
     for (int i = 1; i < line; i++)
     {
         for (int j = line; j > i + 1; j--)
         {
-            printf(" ");
+            cout << " ";
         }
         for (int j = 0; j < i + 1; j++)
         {
-            printf("*");
+            cout << "*";
         }
         for (int j = 1; j < i + 1; j++)
         {
-            printf("*");
+            cout << "*";
         }
-        printf("\n");
+        cout << "\n";
+    }
+}
+
+void hollowHourglass(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = line; j > i; j--)
+        {
+            if (j == line || i == 0)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+
+        for (int j = line - 1; j > i; j--)
+        {
+            if (j == i + 1 || i == 0)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << "\n";
+    }
+
+    for (int i = 1; i < line; i++)
+    {
+        for (int j = line; j > i + 1; j--)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < i + 1; j++)
+        {
+            if (j == 0 || i == line - 1)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        for (int j = 1; j < i + 1; j++)
+        {
+            if (j == i || i == line - 1)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << "\n";
     }
 }
 
 int main()
 {
-    hourglass(5);
+    hollowHourglass(5);
 
     return 0;
 }
