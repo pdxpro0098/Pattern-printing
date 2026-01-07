@@ -351,4 +351,73 @@ function hourglass(line) {
 
 }
 
-hourglass(8);
+function hollowHourglass(line)
+{
+    let pattern = "";
+    for (let i = 0; i < line; i++)
+    {
+        for (let j = 0; j < i; j++)
+        {
+            pattern += " ";
+        }
+        for (let j = line; j > i; j--)
+        {
+            if (j == line || i == 0)
+            {
+                pattern += "*";
+            }
+            else
+            {
+                pattern += " ";
+            }
+        }
+
+        for (let j = line - 1; j > i; j--)
+        {
+            if (j == i + 1 || i == 0)
+            {
+                pattern += "*";
+            }
+            else
+            {
+                pattern += " ";
+            }
+        }
+         pattern += "\n";
+    }
+
+    for (let i = 1; i < line; i++)
+    {
+        for (let j = line; j > i + 1; j--)
+        {
+            pattern += " ";
+        }
+        for (let j = 0; j < i + 1; j++)
+        {
+            if (j == 0 || i == line - 1)
+            {
+                pattern += "*";
+            }
+            else
+            {
+                pattern += " ";
+            }
+        }
+        for (let j = 1; j < i + 1; j++)
+        {
+            if (j == i || i == line - 1)
+            {
+                pattern += "*";
+            }
+            else
+            {
+                pattern += " ";
+            }
+        }
+         pattern += "\n";
+    }
+
+    console.log(pattern);
+}
+
+hollowHourglass(5);
