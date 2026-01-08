@@ -431,7 +431,6 @@ void hollowHourglass(int line)
                 printf(" ");
             }
         }
-
         for (int j = line - 1; j > i; j--)
         {
             if (j == i + 1 || i == 0)

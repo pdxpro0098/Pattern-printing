@@ -205,5 +205,107 @@ def hourglass(line):
         print("*"*(i), end="")
         print()
 
+"""
+
+void hollowHourglass(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf(" ");
+        }
+        for (int j = line; j > i; j--)
+        {
+            if (j == line || i == 0)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+
+        for (int j = line - 1; j > i; j--)
+        {
+            if (j == i + 1 || i == 0)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    for (int i = 1; i < line; i++)
+    {
+        for (int j = line; j > i + 1; j--)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < i + 1; j++)
+        {
+            if (j == 0 || i == line - 1)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        for (int j = 1; j < i + 1; j++)
+        {
+            if (j == i || i == line - 1)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
+"""
+
+def hollowHourGlass(line):
+    for i in range(line):
+        for j in range(i):
+            print(" ",end="")
+
+        for j in reversed(range(line-i)):
+            if (j == line-i-1 or i == 0):
+                print("*",end="")
+            else:
+                print(" ",end="")
+
+        for j in reversed(range(line-i-1)):
+            if (j == 0 or i == 0):
+                print("*",end="")
+            else:
+                print(" ",end="")
+        print()
+
+    for i in range(line):
+        for j in reversed(range(line-i-1)):
+                print(" ",end="")
+        for j in range(i+1):
+            if j == 0 or i == line-1:
+                print("*",end="")
+            else:
+                print(" ",end="")
+        for j in range(1,i+1):
+            if j == i or i == line-1:
+                print("*",end="")
+            else:
+                print(" ",end="")
+        print()
+
 if __name__ == "__main__":
-    hourglass(7)
+    hollowHourGlass(7)
