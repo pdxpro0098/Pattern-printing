@@ -477,8 +477,38 @@ void hollowHourglass(int line)
     }
 }
 
+void arrowPatternLeft(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        printf("\n");
+        for (int j = line; j > i; j--)
+        {
+            printf(" ");
+        }
+        for (int j = line; j > i; j--)
+        {
+            printf("*");
+        }
+    }
+
+    for (int i = 0; i <= line; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+
 int main()
 {
-    hollowHourglass(5);
+    arrowPatternLeft(5);
     return 0;
 }
