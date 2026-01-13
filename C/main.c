@@ -599,8 +599,73 @@ void butterfly(int line)
     }
 }
 
+void hollowButterfly(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            if (i == j + 1 || j == 0)
+            {
+                printf("*", i);
+            }
+            else
+            {
+                printf(" ", i);
+            }
+        }
+        for (int j = line * 2; j > (i * 2) + 1; j--)
+        {
+            printf(" ", j);
+        }
+        for (int j = 0; j < i; j++)
+        {
+            if (i == j + 1 || j == 0)
+            {
+                printf("*", i);
+            }
+            else
+            {
+                printf(" ", i);
+            }
+        }
+        printf("\n");
+    }
+
+    for (int i = 1; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            if (j == line || i == j - 1)
+            {
+                printf("*", i);
+            }
+            else
+            {
+                printf(" ", i);
+            }
+        }
+        for (int j = 0; j < (i * 2) - 1; j++)
+        {
+            printf(" ", j);
+        }
+        for (int j = line; j > i; j--)
+        {
+            if (j == line || i == j - 1)
+            {
+                printf("*", i);
+            }
+            else
+            {
+                printf(" ", i);
+            }
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
-    butterfly(5);
+    hollowButterfly(5);
     return 0;
 }
