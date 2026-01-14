@@ -664,8 +664,32 @@ void hollowButterfly(int line)
     }
 }
 
+
+void sinWave(int row, int col)
+{
+    int period = 2 * (row - 1);
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            int k = j % period;
+            if (k == i || k == period - i)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+
 int main()
 {
-    hollowButterfly(5);
+    sinWave(5,33);
     return 0;
 }
