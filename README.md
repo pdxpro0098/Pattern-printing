@@ -322,13 +322,20 @@
 ```
 ---
 
-## Swastik Pattern
+## Checkerboard with Characters
 ```
+* . * . * . * 
+. * . * . * .
+* . * . * . *
+. * . * . * .
+* . * . * . *
+. * . * . * .
+* . * . * . *
 
 ```
 ---
 
-## Checkerboard with Characters
+## Swastik Pattern
 ```
 
 ```
