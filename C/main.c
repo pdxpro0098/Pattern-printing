@@ -723,8 +723,28 @@ void heart(int line)
     }
 }
 
+void checkerBoardCharacters(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < line; j++)
+        {
+            if ((i + j) % 2 == 0)
+            {
+                printf("* ");
+            }
+            else
+            {
+                printf(". ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+
 int main()
 {
-    heart(7);
+    checkerBoardCharacters(7);
     return 0;
 }
