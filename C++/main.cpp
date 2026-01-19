@@ -568,6 +568,42 @@ void doubleSidedArrow(int line)
     }
 }
 
+void butterfly(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf("*");
+        }
+        for (int j = line * 2; j > (i * 2) + 1; j--)
+        {
+            printf(" ", j);
+        }
+        for (int j = 0; j < i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int i = 2; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            printf("*");
+        }
+        for (int j = 0; j < (i * 2) - 1; j++)
+        {
+            printf(" ", j);
+        }
+        for (int j = line; j > i; j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
     arrowPatternLeft(5);
