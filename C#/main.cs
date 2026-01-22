@@ -1,5 +1,3 @@
-using System;
-
 class Program{
 
     public static void solidSquare(int line)
@@ -14,7 +12,7 @@ class Program{
         }
     } 
 
-    static void Main(string[] args){
+    static void Main(){
         solidSquare(5);
     }
 }
