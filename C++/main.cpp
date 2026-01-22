@@ -482,6 +482,27 @@ void hollowHourglass(int line)
     }
 }
 
+void swastika(int line)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < line; j++)
+        {
+            if ((i >= 0 && j == line / 2) || (j >= 0 && i == line / 2) ||
+                (j == 0 && i <= line / 2) || (i == 0 && j >= line / 2) ||
+                (i == line - 1 && j <= line / 2) || (j == line - 1 && i >= line / 2))
+            {
+                cout<<"* ";
+            }
+            else
+            {
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
 int main()
 {
     hollowHourglass(5);
