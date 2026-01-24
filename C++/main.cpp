@@ -511,6 +511,34 @@ void arrowPatternLeft(int line)
     }
 }
 
+void arrowPatternRight(int line)
+{
+    for (int i = 0; i <= line; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int i = 1; i < line; i++)
+    {
+        for (int j = line; j > i; j--)
+        {
+            printf(" ");
+        }
+        for (int j = line; j > i; j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
     arrowPatternLeft(5);
