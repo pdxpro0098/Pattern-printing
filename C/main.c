@@ -664,7 +664,6 @@ void hollowButterfly(int line)
     }
 }
 
-
 void sinWave(int row, int col)
 {
     int period = 2 * (row - 1);
@@ -691,32 +690,38 @@ void heart(int line)
 {
     for (int i = line / 2; i <= line; i += 2)
     {
-        for (int j = 1; j < line - i; j += 2){
+        for (int j = 1; j < line - i; j += 2)
+        {
             printf(" ");
         }
 
-        for (int j = 1; j <= i; j++){
+        for (int j = 1; j <= i; j++)
+        {
             printf("*");
         }
-        
-        for (int j = 1; j <= line - i; j++){
+
+        for (int j = 1; j <= line - i; j++)
+        {
             printf(" ");
         }
 
-        for (int j = 1; j <= i; j++){
+        for (int j = 1; j <= i; j++)
+        {
             printf("*");
         }
-        
+
         printf("\n");
     }
 
     for (int i = line; i >= 0; i--)
     {
-        for (int j = i; j < line; j++){
+        for (int j = i; j < line; j++)
+        {
             printf(" ");
         }
 
-        for (int j = 1; j <= (i * 2); j++){
+        for (int j = 1; j <= (i * 2); j++)
+        {
             printf("*");
         }
         printf("\n");
@@ -757,6 +762,29 @@ void swastika(int line)
             else
             {
                 printf("  ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+void frameInSideFrame(int line, int gap)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < line; j++)
+        {
+            if ((i == 0 || i == line - 1 || j == 0 || j == line - 1) ||
+                (i == gap && j >= gap && j < line - gap - 1) ||
+                (i == line - gap - 1 && j >= gap && j < line - gap - 1) ||
+                (j == gap && i >= gap && i <= line - gap - 1) ||
+                (j == line - gap - 1 && i >= gap && i < line - gap))
+            {
+                printf("*");
+            }
+            else
+            {
+                printf("-");
             }
         }
         printf("\n");
