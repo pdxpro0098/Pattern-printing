@@ -482,30 +482,38 @@ void hollowHourglass(int line)
     }
 }
 
-void swastika(int line)
+void arrowPatternLeft(int line)
 {
     for (int i = 0; i < line; i++)
     {
-        for (int j = 0; j < line; j++)
+        printf("\n");
+        for (int j = line; j > i; j--)
         {
-            if ((i >= 0 && j == line / 2) || (j >= 0 && i == line / 2) ||
-                (j == 0 && i <= line / 2) || (i == 0 && j >= line / 2) ||
-                (i == line - 1 && j <= line / 2) || (j == line - 1 && i >= line / 2))
-            {
-                cout<<"* ";
-            }
-            else
-            {
-                cout<<"  ";
-            }
+            printf(" ");
         }
-        cout<<"\n";
+        for (int j = line; j > i; j--)
+        {
+            printf("*");
+        }
+    }
+
+    for (int i = 0; i <= line; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
     }
 }
 
 int main()
 {
-    hollowHourglass(5);
+    arrowPatternLeft(5);
 
     return 0;
 }
