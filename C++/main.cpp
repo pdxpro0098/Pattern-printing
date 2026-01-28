@@ -691,6 +691,48 @@ void sinWave(int row, int col)
     }
 }
 
+void heart(int line)
+{
+    for (int i = line / 2; i <= line; i += 2)
+    {
+        for (int j = 1; j < line - i; j += 2)
+        {
+            printf(" ");
+        }
+
+        for (int j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+
+        for (int j = 1; j <= line - i; j++)
+        {
+            printf(" ");
+        }
+
+        for (int j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+
+    for (int i = line; i >= 0; i--)
+    {
+        for (int j = i; j < line; j++)
+        {
+            printf(" ");
+        }
+
+        for (int j = 1; j <= (i * 2); j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
     arrowPatternLeft(5);
