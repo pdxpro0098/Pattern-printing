@@ -773,6 +773,29 @@ void swastika(int line)
     }
 }
 
+void frameInSideFrame(int line, int gap)
+{
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < line; j++)
+        {
+            if ((i == 0 || i == line - 1 || j == 0 || j == line - 1) ||
+                (i == gap && j >= gap && j < line - gap - 1) ||
+                (i == line - gap - 1 && j >= gap && j < line - gap - 1) ||
+                (j == gap && i >= gap && i <= line - gap - 1) ||
+                (j == line - gap - 1 && i >= gap && i < line - gap))
+            {
+                printf("*");
+            }
+            else
+            {
+                printf("-");
+            }
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
     arrowPatternLeft(5);
