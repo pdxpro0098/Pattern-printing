@@ -309,76 +309,76 @@ public class Main {
         }
     }
 
-    
-    static void hollowHourglass(int line)
-    {
-        for (int i = 0; i < line; i++)
-        {
-            for (int j = 0; j < i; j++)
-            {
-              System.out.print(" ");
+    static void hollowHourglass(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
 
             }
-            for (int j = line; j > i; j--)
-            {
-                if (j == line || i == 0)
-                {
+            for (int j = line; j > i; j--) {
+                if (j == line || i == 0) {
                     System.out.print("*");
-                }
-                else
-                {
-                  System.out.print(" ");
+                } else {
+                    System.out.print(" ");
                 }
             }
 
-            for (int j = line - 1; j > i; j--)
-            {
-                if (j == i + 1 || i == 0)
-                {
+            for (int j = line - 1; j > i; j--) {
+                if (j == i + 1 || i == 0) {
                     System.out.print("*");
-                }
-                else
-                {
-                  System.out.print(" ");
+                } else {
+                    System.out.print(" ");
                 }
             }
-          System.out.println();
+            System.out.println();
         }
 
-        for (int i = 1; i < line; i++)
-        {
-            for (int j = line; j > i + 1; j--)
-            {
-              System.out.print(" ");
+        for (int i = 1; i < line; i++) {
+            for (int j = line; j > i + 1; j--) {
+                System.out.print(" ");
             }
-            for (int j = 0; j < i + 1; j++)
-            {
-                if (j == 0 || i == line - 1)
-                {
+            for (int j = 0; j < i + 1; j++) {
+                if (j == 0 || i == line - 1) {
                     System.out.print("*");
-                }
-                else
-                {
-                  System.out.print(" ");
+                } else {
+                    System.out.print(" ");
                 }
             }
-            for (int j = 1; j < i + 1; j++)
-            {
-                if (j == i || i == line - 1)
-                {
+            for (int j = 1; j < i + 1; j++) {
+                if (j == i || i == line - 1) {
                     System.out.print("*");
-                }
-                else
-                {
-                  System.out.print(" ");
+                } else {
+                    System.out.print(" ");
 
                 }
             }
-          System.out.println();
+            System.out.println();
+        }
+    }
+
+    static void arrowPatternLeft(int line) {
+        for (int i = 0; i < line; i++) {
+           System.out.print("\n");
+            for (int j = line; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = line; j > i; j--) {
+                System.out.print("*");
+            }
+        }
+
+        for (int i = 0; i <= line; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
         }
     }
 
     public static void main(String[] args) {
-        hollowHourglass(5);
+        arrowPatternLeft(5);
     }
 }
