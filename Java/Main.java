@@ -358,7 +358,7 @@ public class Main {
 
     static void arrowPatternLeft(int line) {
         for (int i = 0; i < line; i++) {
-           System.out.print("\n");
+            System.out.print("\n");
             for (int j = line; j > i; j--) {
                 System.out.print(" ");
             }
@@ -377,8 +377,30 @@ public class Main {
             System.out.print("\n");
         }
     }
+    
+   static void arrowPatternRight(int line) {
+        for (int i = 0; i <= line; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 1; i < line; i++) {
+            for (int j = line; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = line; j > i; j--) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 
     public static void main(String[] args) {
-        arrowPatternLeft(5);
+        arrowPatternRight(5);
+        
     }
 }
