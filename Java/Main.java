@@ -425,7 +425,7 @@ public class Main {
         }
     }
     
-   static void butterfly(int line) {
+    static void butterfly(int line) {
         for (int i = 0; i < line; i++) {
             for (int j = 0; j < i; j++) {
                 System.out.print("*");
@@ -449,6 +449,50 @@ public class Main {
                 System.out.print("*");
             }
             System.out.println();
+        }
+    }
+    
+   static void hollowButterfly(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < i; j++) {
+                if (i == j + 1 || j == 0) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            for (int j = line * 2; j > (i * 2) + 1; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i; j++) {
+                if (i == j + 1 || j == 0) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("\n");
+        }
+
+        for (int i = 1; i < line; i++) {
+            for (int j = line; j > i; j--) {
+                if (j == line || i == j - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            for (int j = 0; j < (i * 2) - 1; j++) {
+                System.out.print(" ");
+            }
+            for (int j = line; j > i; j--) {
+                if (j == line || i == j - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("\n");
         }
     }
     
