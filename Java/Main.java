@@ -452,7 +452,7 @@ public class Main {
         }
     }
     
-   static void hollowButterfly(int line) {
+    static void hollowButterfly(int line) {
         for (int i = 0; i < line; i++) {
             for (int j = 0; j < i; j++) {
                 if (i == j + 1 || j == 0) {
@@ -487,6 +487,22 @@ public class Main {
             }
             for (int j = line; j > i; j--) {
                 if (j == line || i == j - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+    
+   static void sinWave(int row, int col) {
+        int period = 2 * (row - 1);
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                int k = j % period;
+                if (k == i || k == period - i) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
