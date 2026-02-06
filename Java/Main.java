@@ -496,7 +496,7 @@ public class Main {
         }
     }
     
-   static void sinWave(int row, int col) {
+    static void sinWave(int row, int col) {
         int period = 2 * (row - 1);
 
         for (int i = 0; i < row; i++) {
@@ -507,6 +507,39 @@ public class Main {
                 } else {
                     System.out.print(" ");
                 }
+            }
+            System.out.print("\n");
+        }
+    }
+    
+   static void heart(int line) {
+        for (int i = line / 2; i <= line; i += 2) {
+            for (int j = 1; j < line - i; j += 2) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+
+            for (int j = 1; j <= line - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+
+            System.out.print("\n");
+        }
+
+        for (int i = line; i >= 0; i--) {
+            for (int j = i; j < line; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= (i * 2); j++) {
+                System.out.print("*");
             }
             System.out.print("\n");
         }
