@@ -512,7 +512,7 @@ public class Main {
         }
     }
     
-   static void heart(int line) {
+    static void heart(int line) {
         for (int i = line / 2; i <= line; i += 2) {
             for (int j = 1; j < line - i; j += 2) {
                 System.out.print(" ");
@@ -540,6 +540,19 @@ public class Main {
 
             for (int j = 1; j <= (i * 2); j++) {
                 System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+    }
+    
+   static void checkerBoardCharacters(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < line; j++) {
+                if ((i + j) % 2 == 0) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print(". ");
+                }
             }
             System.out.print("\n");
         }
