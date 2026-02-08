@@ -377,7 +377,7 @@ public class Main {
             System.out.println();
         }
     }
-    
+
     static void arrowPatternRight(int line) {
         for (int i = 0; i <= line; i++) {
             for (int j = 0; j < i; j++) {
@@ -424,7 +424,7 @@ public class Main {
             System.out.println();
         }
     }
-    
+
     static void butterfly(int line) {
         for (int i = 0; i < line; i++) {
             for (int j = 0; j < i; j++) {
@@ -451,7 +451,7 @@ public class Main {
             System.out.println();
         }
     }
-    
+
     static void hollowButterfly(int line) {
         for (int i = 0; i < line; i++) {
             for (int j = 0; j < i; j++) {
@@ -495,7 +495,7 @@ public class Main {
             System.out.print("\n");
         }
     }
-    
+
     static void sinWave(int row, int col) {
         int period = 2 * (row - 1);
 
@@ -511,7 +511,7 @@ public class Main {
             System.out.print("\n");
         }
     }
-    
+
     static void heart(int line) {
         for (int i = line / 2; i <= line; i += 2) {
             for (int j = 1; j < line - i; j += 2) {
@@ -544,8 +544,8 @@ public class Main {
             System.out.print("\n");
         }
     }
-    
-   static void checkerBoardCharacters(int line) {
+
+    static void checkerBoardCharacters(int line) {
         for (int i = 0; i < line; i++) {
             for (int j = 0; j < line; j++) {
                 if ((i + j) % 2 == 0) {
@@ -557,9 +557,41 @@ public class Main {
             System.out.print("\n");
         }
     }
-    
+
+    static void swastika(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < line; j++) {
+                if ((i >= 0 && j == line / 2) || (j >= 0 && i == line / 2) ||
+                        (j == 0 && i <= line / 2) || (i == 0 && j >= line / 2) ||
+                        (i == line - 1 && j <= line / 2) || (j == line - 1 && i >= line / 2)) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+
+    static void frameInSideFrame(int line, int gap) {
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < line; j++) {
+                if ((i == 0 || i == line - 1 || j == 0 || j == line - 1) ||
+                        (i == gap && j >= gap && j < line - gap - 1) ||
+                        (i == line - gap - 1 && j >= gap && j < line - gap - 1) ||
+                        (j == gap && i >= gap && i <= line - gap - 1) ||
+                        (j == line - gap - 1 && i >= gap && i < line - gap)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print("-");
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+
     public static void main(String[] args) {
         butterfly(5);
-        
+
     }
 }
