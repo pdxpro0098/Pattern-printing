@@ -793,6 +793,6 @@ void frameInSideFrame(int line, int gap)
 
 int main()
 {
-    swastika(7);
+    arrowPatternLeft(7);
     return 0;
 }
