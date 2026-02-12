@@ -244,17 +244,33 @@ def arrowPatternLeft(line):
     for i in range(line):
         print()
         for _ in reversed(range(line - i)):
-            print(" ", end=" ")
+            print(" ", end="")
         for _ in reversed(range(line - i)):
-            print("*", end=" ")
+            print("*", end="")
 
     for i in range(line):
-        for _ in range(i - 1):
-            print(" ", end=" ")
         for _ in range(i):
-            print("*", end=" ")
+            print(" ", end="")
+        for _ in range(i):
+            print("*", end="")
+        print()
+
+
+def arrowPatternRight(line):
+    for i in range(line):
+        for _ in range(i):
+            print(" ", end="")
+        for _ in range(i):
+            print("*", end="")
+        print()
+
+    for i in range(line):
+        for _ in reversed(range(line - i)):
+            print(" ", end="")
+        for _ in reversed(range(line - i)):
+            print("*", end="")
         print()
 
 
 if __name__ == "__main__":
-    arrowPatternLeft(10)
+    arrowPatternRight(10)
