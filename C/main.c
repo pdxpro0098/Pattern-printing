@@ -793,6 +793,6 @@ void frameInSideFrame(int line, int gap)
 
 int main()
 {
-    arrowPatternLeft(7);
+    doubleSidedArrow(7);
     return 0;
 }

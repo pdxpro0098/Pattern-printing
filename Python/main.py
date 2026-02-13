@@ -272,5 +272,29 @@ def arrowPatternRight(line):
         print()
 
 
+def doubleSidedArrow(line):
+    for i in range(line):
+        for j in range(line * 2, i * 2, -1):
+            print(" ", end="")
+        for j in range(i):
+            print("*", end="")
+        for j in range((i * 2) - 1):
+            print(" ", end="")
+        for j in range(i):
+            print("*", end="")
+        print()
+
+    for i in range(line):
+        for j in range((i * 2)):
+            print(" ", end="")
+        for j in reversed(range(line - i)):
+            print("*", end="")
+        for j in range(line * 2, (i * 2) + 1, -1):
+            print(" ", end="")
+        for j in range(line - i):
+            print("*", end="")
+        print()
+
+
 if __name__ == "__main__":
-    arrowPatternRight(10)
+    doubleSidedArrow(10)
