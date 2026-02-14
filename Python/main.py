@@ -274,26 +274,49 @@ def arrowPatternRight(line):
 
 def doubleSidedArrow(line):
     for i in range(line):
-        for j in range(line * 2, i * 2, -1):
+        for _ in range(line * 2, i * 2, -1):
             print(" ", end="")
-        for j in range(i):
+        for _ in range(i):
             print("*", end="")
-        for j in range((i * 2) - 1):
+        for _ in range((i * 2) - 1):
             print(" ", end="")
-        for j in range(i):
+        for _ in range(i):
             print("*", end="")
         print()
 
     for i in range(line):
-        for j in range((i * 2)):
+        for _ in range((i * 2)):
             print(" ", end="")
-        for j in reversed(range(line - i)):
+        for _ in reversed(range(line - i)):
             print("*", end="")
-        for j in range(line * 2, (i * 2) + 1, -1):
+        for _ in range(line * 2, (i * 2) + 1, -1):
             print(" ", end="")
-        for j in range(line - i):
+        for _ in range(line - i):
             print("*", end="")
         print()
+
+
+def butterfly(line):
+    for i in range(line):
+        for _ in range(i):
+            print("*", end="")
+        for _ in range(line * 2, i * 2, -1):
+            print(" ", end="")
+        for _ in reversed(range(i)):
+            print("*", end="")
+        print("")
+
+    for i in range(2, line):
+        for _ in range(line, i, -1):
+            print("*", end="")
+        for _ in range(
+            0,
+            i * 2,
+        ):
+            print(" ", end="")
+        for _ in reversed(range(line - i)):
+            print("*", end="")
+        print("")
 
 
 if __name__ == "__main__":
