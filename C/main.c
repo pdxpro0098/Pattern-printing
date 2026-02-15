@@ -607,11 +607,11 @@ void hollowButterfly(int line)
         {
             if (i == j + 1 || j == 0)
             {
-                printf("*", i);
+                printf("*");
             }
             else
             {
-                printf(" ", i);
+                printf(" ");
             }
         }
         for (int j = line * 2; j > (i * 2) + 1; j--)
@@ -622,11 +622,11 @@ void hollowButterfly(int line)
         {
             if (i == j + 1 || j == 0)
             {
-                printf("*", i);
+                printf("*");
             }
             else
             {
-                printf(" ", i);
+                printf(" ");
             }
         }
         printf("\n");
@@ -638,11 +638,11 @@ void hollowButterfly(int line)
         {
             if (j == line || i == j - 1)
             {
-                printf("*", i);
+                printf("*");
             }
             else
             {
-                printf(" ", i);
+                printf(" ");
             }
         }
         for (int j = 0; j < (i * 2) - 1; j++)
@@ -653,11 +653,11 @@ void hollowButterfly(int line)
         {
             if (j == line || i == j - 1)
             {
-                printf("*", i);
+                printf("*");
             }
             else
             {
-                printf(" ", i);
+                printf(" ");
             }
         }
         printf("\n");
