@@ -309,15 +309,24 @@ def butterfly(line):
     for i in range(2, line):
         for _ in range(line, i, -1):
             print("*", end="")
-        for _ in range(
-            0,
-            i * 2,
-        ):
+        for _ in range(0, i * 2):
             print(" ", end="")
         for _ in reversed(range(line - i)):
             print("*", end="")
         print("")
 
 
+def sinWave(row, col):
+    period = 2 * (row - 1)
+    for i in range(row):
+        for j in range(col):
+            k = j % period
+            if k == i or k == period - i:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print("")
+
+
 if __name__ == "__main__":
-    doubleSidedArrow(10)
+    butterfly(10)
