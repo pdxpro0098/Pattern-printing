@@ -99,7 +99,7 @@ def binaryTriangle(line):
                 print("0", end=" ")
             else:
                 print("1", end=" ")
-        print("")
+        print()
 
 
 def pyramid(line):
@@ -110,7 +110,7 @@ def pyramid(line):
             print("*", end="")
         for _ in range(i + 1):
             print("*", end="")
-        print("")
+        print()
 
 
 def invertedPyramid(line):
@@ -120,7 +120,7 @@ def invertedPyramid(line):
             print("*", end="")
         for _ in reversed(range(line - i - 1)):
             print("*", end="")
-        print("")
+        print()
 
 
 def hollowPyramid(line):
@@ -157,7 +157,7 @@ def diamond(line):
             print("*", end="")
         for _ in range(i - 1):
             print("*", end="")
-        print("")
+        print()
 
     for i in range(line):
         print(" " * i, end="")
@@ -165,7 +165,7 @@ def diamond(line):
             print("*", end="")
         for _ in reversed(range(line - i - 1)):
             print("*", end="")
-        print("")
+        print()
 
 
 def hollowDiamond(line):
@@ -304,7 +304,7 @@ def butterfly(line):
             print(" ", end="")
         for _ in reversed(range(i)):
             print("*", end="")
-        print("")
+        print()
 
     for i in range(2, line):
         for _ in range(line, i, -1):
@@ -313,7 +313,7 @@ def butterfly(line):
             print(" ", end="")
         for _ in reversed(range(line - i)):
             print("*", end="")
-        print("")
+        print()
 
 
 def sinWave(row, col):
@@ -325,7 +325,7 @@ def sinWave(row, col):
                 print("*", end="")
             else:
                 print(" ", end="")
-        print("")
+        print()
 
 
 if __name__ == "__main__":
