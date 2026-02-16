@@ -328,5 +328,35 @@ def sinWave(row, col):
         print()
 
 
+def heart(line):
+    for i in range(line // 2, line, 2):
+        for _ in range(1, line - i, 2):
+            print(" ", end="")
+        for _ in range(i):
+            print("*", end="")
+        for _ in range((line - 1) - i):
+            print(" ", end="")
+        for _ in range(i):
+            print("*", end="")
+        print("")
+
+    for i in reversed(range(line)):
+        for _ in range(line - i - 1):
+            print(" ", end="")
+        for _ in range(i * 2):
+            print("*", end="")
+        print("")
+
+
+def checkerBoardCharacters(line):
+    for i in range(line):
+        for j in range(line):
+            if (i + j) % 2 == 0:
+                print("* ", end="")
+            else:
+                print(". ", end="")
+        print("")
+
+
 if __name__ == "__main__":
     butterfly(10)
