@@ -358,5 +358,39 @@ def checkerBoardCharacters(line):
         print("")
 
 
+def swastika(line):
+    for i in range(line):
+        for j in range(line):
+            if (
+                (i >= 0 and j == line // 2)
+                or (j >= 0 and i == line // 2)
+                or (j == 0 and i <= line // 2)
+                or (i == 0 and j >= line // 2)
+                or (i == line - 1 and j <= line // 2)
+                or (j == line - 1 and i >= line // 2)
+            ):
+                print("* ", end="")
+            else:
+                print("  ", end="")
+        print()
+
+
+def frameInSideFrame(line, gap):
+    for i in range(line):
+        for j in range(line):
+            if (
+                (i == 0 or i == line - 1 or j == 0 or j == line - 1)
+                or (i == gap and j >= gap and j < line - gap - 1)
+                or (i == line - gap - 1 and j >= gap and j < line - gap - 1)
+                or (j == gap and i >= gap and i <= line - gap - 1)
+                or (j == line - gap - 1 and i >= gap and i < line - gap)
+            ):
+                print("*", end="")
+            else:
+                print(" ", end="")
+
+        print()
+
+
 if __name__ == "__main__":
     butterfly(10)
