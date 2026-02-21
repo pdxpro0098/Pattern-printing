@@ -358,22 +358,5 @@ def checkerBoardCharacters(line):
         print("")
 
 
-def swastika(line):
-    for i in range(line):
-        for j in range(line):
-            if (
-                (i >= 0 and j == line // 2)
-                or (j >= 0 and i == line // 2)
-                or (j == 0 and i <= line // 2)
-                or (i == 0 and j >= line // 2)
-                or (i == line - 1 and j <= line // 2)
-                or (j == line - 1 and i >= line // 2)
-            ):
-                print("* ", end="")
-            else:
-                print("  ", end="")
-        print()
-
-
 if __name__ == "__main__":
     butterfly(10)
