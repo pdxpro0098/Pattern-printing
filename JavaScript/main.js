@@ -420,4 +420,28 @@ function hollowHourglass(line)
     console.log(pattern);
 }
 
-hollowHourglass(5);
+function arrowPatternLeft(line) {
+    let pattern = "";
+
+    for (let i = 0; i < line; i++) {
+        pattern += ("\n");
+        for (let j = line; j > i; j--) {
+            pattern += (" ");
+        }
+        for (let j = line; j > i; j--) {
+            pattern += ("*");
+        }
+    }
+
+    for (let i = 0; i <= line; i++) {
+        for (let j = 0; j <= i; j++) {
+            pattern += (" ");
+        }
+        for (let j = 0; j < i; j++) {
+            pattern += ("*");
+        }
+        pattern += ("\n");
+    }
+
+    console.log(pattern);
+}
