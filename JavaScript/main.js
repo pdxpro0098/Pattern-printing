@@ -469,3 +469,35 @@ function arrowPatternRight(line) {
     }
     console.log(pattern);
 }
+
+
+
+function doubleSidedArrow(line) {
+    let pattern = "";
+
+    for (let i = 0; i < line; i++) {
+        for (let j = line * 2; j > (i * 2); j--)
+            pattern += (" ");
+        for (let j = 0; j < i; j++)
+            pattern += ("*");
+        for (let j = 0; j < (i * 2) - 1; j++)
+            pattern += (" ");
+        for (let j = 0; j < i; j++)
+            pattern += ("*");
+        pattern += ("\n");
+    }
+
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i * 2; j++)
+            pattern += (" ");
+        for (let j = line; j > i; j--)
+            pattern += ("*");
+        for (let j = line * 2; j > (i * 2) + 1; j--)
+            pattern += (" ");
+        for (let j = line; j > i; j--)
+            pattern += ("*");
+        pattern += ("\n");
+    }
+    console.log(pattern);
+
+}
