@@ -351,70 +351,53 @@ function hourglass(line) {
 
 }
 
-function hollowHourglass(line)
-{
+function hollowHourglass(line) {
     let pattern = "";
-    for (let i = 0; i < line; i++)
-    {
-        for (let j = 0; j < i; j++)
-        {
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i; j++) {
             pattern += " ";
         }
-        for (let j = line; j > i; j--)
-        {
-            if (j == line || i == 0)
-            {
+        for (let j = line; j > i; j--) {
+            if (j == line || i == 0) {
                 pattern += "*";
             }
-            else
-            {
+            else {
                 pattern += " ";
             }
         }
 
-        for (let j = line - 1; j > i; j--)
-        {
-            if (j == i + 1 || i == 0)
-            {
+        for (let j = line - 1; j > i; j--) {
+            if (j == i + 1 || i == 0) {
                 pattern += "*";
             }
-            else
-            {
+            else {
                 pattern += " ";
             }
         }
-         pattern += "\n";
+        pattern += "\n";
     }
 
-    for (let i = 1; i < line; i++)
-    {
-        for (let j = line; j > i + 1; j--)
-        {
+    for (let i = 1; i < line; i++) {
+        for (let j = line; j > i + 1; j--) {
             pattern += " ";
         }
-        for (let j = 0; j < i + 1; j++)
-        {
-            if (j == 0 || i == line - 1)
-            {
+        for (let j = 0; j < i + 1; j++) {
+            if (j == 0 || i == line - 1) {
                 pattern += "*";
             }
-            else
-            {
+            else {
                 pattern += " ";
             }
         }
-        for (let j = 1; j < i + 1; j++)
-        {
-            if (j == i || i == line - 1)
-            {
+        for (let j = 1; j < i + 1; j++) {
+            if (j == i || i == line - 1) {
                 pattern += "*";
             }
-            else
-            {
+            else {
                 pattern += " ";
             }
         }
-         pattern += "\n";
+        pattern += "\n";
     }
 
     console.log(pattern);
@@ -448,7 +431,7 @@ function arrowPatternLeft(line) {
 
 function arrowPatternRight(line) {
     let pattern = "";
-    
+
     for (let i = 0; i <= line; i++) {
         for (let j = 0; j < i; j++) {
             pattern += (" ");
@@ -469,7 +452,6 @@ function arrowPatternRight(line) {
     }
     console.log(pattern);
 }
-
 
 
 function doubleSidedArrow(line) {
@@ -500,4 +482,35 @@ function doubleSidedArrow(line) {
     }
     console.log(pattern);
 
+}
+
+
+function butterfly(line) {
+    let pattern = "";
+
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i; j++) {
+            pattern += ("*");
+        }
+        for (let j = line * 2; j > (i * 2) + 1; j--) {
+            pattern += (" ");
+        }
+        for (let j = 0; j < i; j++) {
+            pattern += ("*");
+        }
+        pattern += ("\n");
+    }
+    for (let i = 2; i < line; i++) {
+        for (let j = line; j > i; j--) {
+            pattern += ("*");
+        }
+        for (let j = 0; j < (i * 2) - 1; j++) {
+            pattern += (" ");
+        }
+        for (let j = line; j > i; j--) {
+            pattern += ("*");
+        }
+        pattern += ("\n");
+    }
+    console.log(pattern);
 }
