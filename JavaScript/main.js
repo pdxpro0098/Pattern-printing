@@ -514,3 +514,42 @@ function butterfly(line) {
     }
     console.log(pattern);
 }
+
+
+function hollowButterfly(line) {
+    let pattern = "";
+
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < i; j++) {
+            if (i == j + 1 || j == 0) pattern += ("*");
+            else pattern += (" ");
+        }
+        for (let j = line * 2; j > (i * 2) + 1; j--) {
+            pattern += (" ");
+        }
+        for (let j = 0; j < i; j++) {
+            if (i == j + 1 || j == 0) pattern += ("*");
+            else
+                pattern += (" ");
+        }
+        pattern += ("\n");
+    }
+
+    for (let i = 1; i < line; i++) {
+        for (let j = line; j > i; j--) {
+            if (j == line || i == j - 1) pattern += ("*");
+            else pattern += (" ");
+        }
+        for (let j = 0; j < (i * 2) - 1; j++) {
+            pattern += (" ");
+        }
+        for (let j = line; j > i; j--) {
+            if (j == line || i == j - 1) pattern += ("*");
+            else pattern += (" ");
+
+        }
+        pattern += ("\n");
+    }
+    console.log(pattern);
+
+}
