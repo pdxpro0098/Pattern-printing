@@ -551,5 +551,26 @@ function hollowButterfly(line) {
         pattern += ("\n");
     }
     console.log(pattern);
+}
+
+
+function sinWave(row, col) {
+    let pattern = "";
+
+    let period = 2 * (row - 1);
+
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < col; j++) {
+            let k = j % period;
+            if (k == i || k == period - i) {
+                pattern += ("*");
+            }
+            else {
+                pattern += (" ");
+            }
+        }
+        pattern += ("\n");
+    }
+    console.log(pattern);
 
 }
