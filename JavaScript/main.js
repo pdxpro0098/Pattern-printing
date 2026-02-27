@@ -572,5 +572,36 @@ function sinWave(row, col) {
         pattern += ("\n");
     }
     console.log(pattern);
+}
 
+function heart(line) {
+    let pattern = "";
+
+    for (let i = line / 2; i <= line; i += 2) {
+        for (let j = 1; j < line - i; j += 2) {
+            pattern += (" ");
+        }
+        for (let j = 1; j <= i; j++) {
+            pattern += ("*");
+        }
+        for (let j = 1; j <= line - i; j++) {
+            pattern += (" ");
+        }
+        for (let j = 1; j <= i; j++) {
+            pattern += ("*");
+        }
+        pattern += ("\n");
+    }
+
+    for (let i = line; i >= 0; i--) {
+        for (let j = i; j < line; j++) {
+            pattern += (" ");
+        }
+        for (let j = 1; j <= (i * 2); j++) {
+            pattern += ("*");
+        }
+        pattern += ("\n");
+    }
+
+    console.log(pattern);
 }
