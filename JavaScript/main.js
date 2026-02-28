@@ -574,6 +574,7 @@ function sinWave(row, col) {
     console.log(pattern);
 }
 
+
 function heart(line) {
     let pattern = "";
 
@@ -603,5 +604,23 @@ function heart(line) {
         pattern += ("\n");
     }
 
+    console.log(pattern);
+}
+
+
+function checkerBoardCharacters(line) {
+    let pattern = "";
+
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < line; j++) {
+            if ((i + j) % 2 == 0) {
+                pattern += ("* ");
+            }
+            else {
+                pattern += (". ");
+            }
+        }
+        pattern += ("\n");
+    }
     console.log(pattern);
 }
