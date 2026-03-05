@@ -127,11 +127,6 @@
 ```
 ---
 
-## Sierpinski_triangle
-```
-```
----
-
 ## Pyramid
 ```
      *    

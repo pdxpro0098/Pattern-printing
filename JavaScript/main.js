@@ -643,5 +643,27 @@ function swastika(line) {
         pattern += ("\n");
     }
     console.log(pattern);
-
 }
+
+function frameInSideFrame(line, gap) {
+    let pattern = "";
+    for (let i = 0; i < line; i++) {
+        for (let j = 0; j < line; j++) {
+            if ((i == 0 || i == line - 1 || j == 0 || j == line - 1) ||
+                (i == gap && j >= gap && j < line - gap - 1) ||
+                (i == line - gap - 1 && j >= gap && j < line - gap - 1) ||
+                (j == gap && i >= gap && i <= line - gap - 1) ||
+                (j == line - gap - 1 && i >= gap && i < line - gap)) {
+                pattern += ("*");
+            }
+            else {
+                pattern += ("-");
+            }
+        }
+        pattern += ("\n");
+    }
+
+    console.log(pattern);
+}
+
+frameInSideFrame(10,2)
